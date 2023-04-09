@@ -2,7 +2,7 @@
 
 Simple Stock Market Simulator is, as the name suggests, a "simple" stock market sim. Here's what makes it so simple:
 
-* Simple install - SSMS runs on vanilla Python, with only standard modules required! SSMS will run out of the box on most Linux distributions.
+* Simple install - SSMS runs on vanilla Python, with only standard modules required!
 * Simple usage -
 1. Edit settings.py.
 2. Run data_generate.py to generate data.
