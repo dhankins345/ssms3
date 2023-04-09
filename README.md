@@ -1,6 +1,6 @@
 # Simple Stock Market Simulator
 
-Simple Stock Market Simulator is, as the name suggests, a "simple" stock market sim. Here are some examples of this simplicity:
+Simple Stock Market Simulator is, as the name suggests, a "simple" stock market sim. Here's what makes it so simple:
 
 * Simple install - SSMS runs on vanilla Python, with only standard modules required! SSMS will run out of the box on most Linux distributions.
 * Simple usage -
