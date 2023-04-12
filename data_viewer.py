@@ -1,13 +1,15 @@
 import settings, csv
 
 stockDay = 1
+stockNumber = len(settings.stock_price)+1
 
 def textOutput(stockDay):
+    startLine = stockNumber * stockDay
     # Generate Header
     print("")
-    print("STOCK MARKET SIMULATOR")
+    print("SIMPLE STOCK MARKET SIMULATOR")
     print("---------------------------------------------------------------------------------")
-    print("Day: " + str(stockDay) + "   +++   " + "Total Market at Close: $" + str(closeTotal) + "   +++   " + "Change in Market: " + str(changeMark))
+    print(f"Day: {stockDay}   +++   Total Market at Close: ${closeTotal}   +++   Change in Market: {changeMark}")
     print("---------------------------------------------------------------------------------")
 
     # Enumerate Stocks
@@ -17,7 +19,7 @@ def textOutput(stockDay):
 
     print("---------------------------------------------------------------------------------")
 
-    wait = input("PRESS < OR > TO SCROLL OR PRESS Q TO QUIT. > ");
+    wait = input("PRESS < OR > TO SCROLL OR PRESS Q TO QUIT - ");
     if wait == "<" and stockDay > 1:
         stockDay = stockDay-1
         textOutput(stockDay)
@@ -26,8 +28,12 @@ def textOutput(stockDay):
         textOutput(stockDay)
     if wait == "Q" or wait == "q":
         quit()
-    print("")
-    textOutput()
 
+# load values from CSV
+lineAmount = stockDay * len(settings.stock_price)
 with open(settings.datafile, 'r') as inputfile:
-    textOutput(stockDay)
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        
+
+textOutput(stockDay)

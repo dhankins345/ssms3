@@ -6,7 +6,7 @@ outputfile = "export.csv"
 # Days to run
 days = 100
 
-# Values of all stocks will be timed by this number to determine total value. Default is 1.
+# Values of all stocks will be multiplied by this number to determine total value. Default is 1.
 totalvalue = 1
 
 # Maximum percentage that stocks can go up or down. Default is 0.04 (4%).
