@@ -70,12 +70,16 @@ def stockSim(duration):
 
 	# Generate day info
 	log_file.write(str(dur+1) + "," + '%.2f'%(closeTotal) + "," + '%.2f'%(changeMark))
+	log_file.write("\n")
 
 	# Enumerate Stocks
 	x = 0
 	for x in range(len(settings.stock_symbols)):
-		if dur == 0: log_file.write("\n" + '%.2f'%(stockprices[x]))
-		else: log_file.write("\n" + '%.2f'%(stockprices[x]) + "," + str(stock_change[x]))
+		log_file.write('%.2f'%(stockprices[x]) + ",")
+	
+	log_file.write("\n")
+	for x in range(len(settings.stock_symbols)):
+		log_file.write(str(stock_change[x]) + ",")
 
 	if dur+2 > duration:
 		quit()
