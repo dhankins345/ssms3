@@ -29,6 +29,8 @@ def textOutput(stockDay):
         textOutput(stockDay)
     if wait == "Q" or wait == "q":
         quit()
+    else:
+        textOutput(stockDay)
 
 # create lists to store values from csv
 marketinfo = []
