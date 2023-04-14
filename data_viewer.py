@@ -15,9 +15,8 @@ def textOutput(stockDay):
     print("---------------------------------------------------------------------------------")
 
     # Enumerate Stocks
-    for x in range(len(stock_symbols)):
-        if a == 0: print('{:10}'.format(settings.stock_symbols[x]) + '{:40}'.format(settings.stock_names[x]) + "$" + '{:>7.2f}'.format(stock_price[x]) + '{:>14}'.format(stock_change[x]))
-        elif a >= 1: print('{:10}'.format(settings.stock_symbols[x]) + '{:40}'.format(settings.stock_names[x]) + "$" + '{:>7.2f}'.format(stock_price[x]) + '{:>+15.2f}'.format(stock_change[x]))
+    for x in range(len(settings.stock_symbols)):
+        print('{:10}'.format(settings.stock_symbols[x]) + '{:40}'.format(settings.stock_names[x]) + "$ " + '{:>6}'.format(marketList[x]) + '{:>12}'.format(marketChg[x]))
 
     print("---------------------------------------------------------------------------------")
 
