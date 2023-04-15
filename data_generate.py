@@ -51,7 +51,7 @@ def stockSim(duration):
 				changeStock2 = changeStock0 - changeStock1
 			else:
 				changeStock2 = changeStock0
-			stock_change[x] = float('%.2f'%(changeStock2))
+			stock_change[x] = '%.2f'%(changeStock2)
 			stockprices[x] = stock_price_old[x] + changeStock2
 
 	# Calculate Total
@@ -66,10 +66,11 @@ def stockSim(duration):
 
 	# Calculate Market Difference
 	changeMarkpre = closeTotalOld - closeTotal
-	changeMark = -changeMarkpre
+	if dur == 0: changeMark = "N/A"
+	else: changeMark = '%.2f'%(-changeMarkpre)
 
 	# Generate day info
-	log_file.write(str(dur+1) + "," + '%.2f'%(closeTotal) + "," + '%.2f'%(changeMark))
+	log_file.write(str(dur+1) + "," + '%.2f'%(closeTotal) + "," + str(changeMark))
 	log_file.write("\n")
 
 	# Enumerate Stocks
