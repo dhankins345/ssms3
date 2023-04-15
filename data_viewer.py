@@ -3,7 +3,7 @@ import settings, csv
 stockDay = 1
 
 def textOutput(stockDay):
-    marketLine = (3 * stockDay) - 3
+    marketLine = stockDay-1
     marketStat = marketinfo[marketLine]
     marketList = marketprice[marketLine]
     marketChg = marketchange[marketLine]
