@@ -20,16 +20,14 @@ def textOutput(stockDay):
 
     print("---------------------------------------------------------------------------------")
 
-    wait = input("PRESS ANY KEY TO SCROLL OR PRESS Q TO QUIT - ")
+    wait = input("PRESS ENTER TO SCROLL OR PRESS Q TO QUIT - ")
     if wait == "Q" or wait == "q":
         quit()
-    if stockDay > 0 and stockDay < settings.days:
-        stockDay = stockDay+1
-        textOutput(stockDay)
-    if stockDay >= settings.days:
+    elif stockDay >= settings.days:
         stockDay = 1
         textOutput(stockDay)
     else:
+        stockDay+=1
         textOutput(stockDay)
 
 # create lists to store values from csv
