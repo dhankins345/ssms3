@@ -16,7 +16,7 @@ def textOutput(stockDay):
 
     # Enumerate Stocks
     for x in range(len(settings.stock_symbols)):
-        print('{:10}'.format(settings.stock_symbols[x]) + '{:40}'.format(settings.stock_names[x]) + "$ " + '{:>6}'.format(marketList[x]) + '{:>12}'.format(marketChg[x]))
+        print('{:10}'.format(settings.stock_symbols[x]) + '{:40}'.format(settings.stock_names[x]) + "$ " + '{:>6}'.format(marketList[x]) + '{:>14}'.format(marketChg[x]))
 
     print("---------------------------------------------------------------------------------")
 
