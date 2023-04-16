@@ -49,9 +49,10 @@ def stockSim(duration):
 			if posNeg < 0.5:
 				changeStock1 = changeStock0 * 2
 				changeStock2 = changeStock0 - changeStock1
+				stock_change[x] = '%.2f'%(changeStock2)
 			else:
 				changeStock2 = changeStock0
-			stock_change[x] = '%.2f'%(changeStock2)
+				stock_change[x] = "+" + '%.2f'%(changeStock2)
 			stockprices[x] = stock_price_old[x] + changeStock2
 
 	# Calculate Total
@@ -65,9 +66,11 @@ def stockSim(duration):
 	closeTotal = finalTotal * settings.totalvalue
 
 	# Calculate Market Difference
-	changeMarkpre = closeTotalOld - closeTotal
+	changeMarkpre = closeTotal - closeTotalOld
 	if dur == 0: changeMark = "N/A"
-	else: changeMark = '%.2f'%(-changeMarkpre)
+	else:
+		if changeMarkpre < 0: changeMark = '%.2f'%(changeMarkpre)
+		else: changeMark = "+" + '%.2f'%(changeMarkpre)
 
 	# Generate day info
 	log_file.write(str(dur+1) + "," + '%.2f'%(closeTotal) + "," + str(changeMark))
