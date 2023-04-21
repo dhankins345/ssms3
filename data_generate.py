@@ -6,6 +6,7 @@ stockprices = settings.stock_price
 # Autogen Total Market Value
 x = 0
 closeTotalOld = 0.00
+closeTotal = 0.00
 while x < len(settings.stock_price):
 	origTotal = stockprices[x]
 	closeTotalOld = closeTotalOld + origTotal
